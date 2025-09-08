@@ -81,8 +81,7 @@ Invoke-WebRequest -Uri http://localhost:3000/recipes -Method POST
 - **Examples:** Form data, HTML webpage, JSON response
 
 ### Data Persistence
-
-- Ways of ensuring data is being stored/retreived correctly
+Methods for ensuring data is being stored/retreived correctly
 #### JSON
 **J**ava**S**cript **O**bject **N**otation – data file type used to easily convert to and from JavaScript objects
 - Key-value pairs in curly braces
@@ -90,9 +89,12 @@ Invoke-WebRequest -Uri http://localhost:3000/recipes -Method POST
 - (used for this project) – more ideal for smaller projects/limited capacity
     - ✅ Simple to use and access (to read from/write to)
     - ❌ Not easily scalable, error prone
-
+---
 #### Databases
-- **Transaction** – Collection of database operations performed as a single unit of work
+- Method for organising data
+- Allows easy access, retreival and modification of data
+- Can be structured *(SQL)* or unstructured *(NoSQL)*
+- **Transaction** – Collection of database operations performed as a single unit of work, should follow **ACID** principles:
     - **A**tomicity – All transactions are completed fully
     - **C**onsistency – Transactions bring database from one valid state to another
     - **I**solation – Transations should be independent
@@ -105,6 +107,7 @@ Invoke-WebRequest -Uri http://localhost:3000/recipes -Method POST
 
 #### NoSQL
 - MongoDB, Couchbase
-- 
+- Semi-scructured databases used to store data using nodes, that can easily be expanded
+- Can be column-based, or key-value-based
     - ✅ High performance and scalability
     - ❌ Prone to data inconsistency, lack of **ACID** compliance
