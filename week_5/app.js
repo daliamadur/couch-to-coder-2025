@@ -17,20 +17,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         //populate text
         //heading
         const nameTag = document.createElement("h3");
-        nameTag.innerText = recipe.name
+        nameTag.innerText = `📜 ${recipe.name}`
         recipeContainer.appendChild(nameTag);
         //cuisine + tags
         const cuisineTag = document.createElement("p");
-        cuisineTag.innerText = recipe.cuisine;
+        cuisineTag.innerText = `🗺️ ${recipe.cuisine}`;
 
         recipeContainer.appendChild(cuisineTag);
 
         const timeTag = document.createElement("p");
-        timeTag.innerText = recipe.time;
+        timeTag.innerText = `⏲️ ${recipe.time}`;
 
         recipeContainer.appendChild(timeTag);
 
         const ingredientListTag = document.createElement("ul");
+
+        recipeContainer.appendChild(document.createElement("br"));
+
+        const ingredients = document.createElement("h4");
+        ingredients.innerText = "Ingredients";
+        recipeContainer.appendChild(ingredients);
 
         for (let ingredient of recipe.ingredients) {
             const ingredientListItemTag = document.createElement("li");
@@ -42,7 +48,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         recipeContainer.appendChild(document.createElement("br"));
 
+        recipeContainer.appendChild(document.createElement("hr"));
+
         const stepsListTag = document.createElement("ol");
+
+        const steps = document.createElement("h4");
+        steps.innerText = "Steps";
+        recipeContainer.appendChild(steps);
 
         for (let step of recipe.steps) {
             const stepsListItemTag = document.createElement("li");
