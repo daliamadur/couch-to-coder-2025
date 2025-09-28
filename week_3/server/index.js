@@ -52,6 +52,24 @@ app.post("/recipes", (req, res) => {
     res.send("Recipe added :D");
 })
 
+//📝 WEEK 7 - DATA ANALYSIS
+app.get("/cuisine-data", (req, res) => {
+    fs.readFile(recipesFilePath, 'utf8', (err, data) => {
+        const recipes = JSON.parse(data);
+        const counts = recipes.reduce((accumulator, recipe) => {
+            const cuisine = recipe.cuisine;
+            if (accumulator[cuisine]) {
+                accumulator[cuisine]++;
+            } else {
+                accumulator[cuisine] = 1;
+            }
+            return accumulator;
+        }, {});
+        console.log(counts)
+        res.json(counts)
+    });
+})
+
 app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)
 })

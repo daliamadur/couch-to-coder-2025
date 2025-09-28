@@ -68,6 +68,37 @@ document.addEventListener("DOMContentLoaded", async () => {
         const recipeList = document.querySelector("#recipe-list")
         recipeList.appendChild(recipeContainer);
     }
+
+    //week 7
+    const cuisineDataResponse = await fetch("http://localhost:3000/cuisine-data");
+    const cuisineData = await cuisineDataResponse.json();
+
+    const xValues = Object.keys(cuisineData);
+    const yValues = Object.values(cuisineData);
+    const colours = [
+        "#6a9c89", "#568b83", "#467a7c", "#3b6972", "#345966", "#2f4858",
+    ]
+
+    new Chart("cuisineDataChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [
+                {
+                    data: yValues,
+                    backgroundColor: colours
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: "Cuisine Popularity"
+            }
+        }
+    }
+    )
 })
 
 const newRecipeForm = document.querySelector("form");

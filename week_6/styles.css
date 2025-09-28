@@ -118,6 +118,14 @@ p {
     padding-left: 20px;
 }
 
+.form-and-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 40px;
+}
+
 /*for mobile*/
 @media screen and (max-width: 600px) {
     form {

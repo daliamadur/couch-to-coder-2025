@@ -1,6 +1,11 @@
 # Couch-to-Coder-2025
 Code snippets and projects completed as a part of Bright Network's Couch to Coder 2025 course!
 
+## Certificates
+📜 **Basic:** *Pending* 🔒
+
+📜 **Advanced:** *Pending* 🔒
+
 ## Lessons
 - ✒️ [Week 1 - Introduction to Programming](/week_1/)
 - ✒️ [Week 2 - Data structures](/week_2/)
@@ -8,7 +13,7 @@ Code snippets and projects completed as a part of Bright Network's Couch to Code
 - ✒️ [Week 4 - Front-end basics](/week_4/)
 - ✒️ [Week 5 - Full-stack](/week_5/)
 - ✒️ [Week 6 - Advanced CSS](/week_6/)
-- ✒️ Week 7 - The fundamentals of data analysis
+- ✒️ [Week 7 - The fundamentals of data analysis](/week_7/)
 
 ## Final Product
 #### 📁 Files
